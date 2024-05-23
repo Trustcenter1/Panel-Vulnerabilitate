@@ -1,0 +1,9 @@
+In fisierul profile.p.php uita-te cum e pusa conditia cand afisezi butoanele de warn / ban si ce mai ai pe-acolo.
+
+Sus, unde ai 
+
+if(isset($_POST['ban'])) {
+inlocuiesti cu 
+
+if(isset($_POST['ban']) && Config::getData('users','Admin',$_SESSION['user']) >= 1) {
+bineinteles, inlocuiesti si la warn/mute, la changemail poti pune la a6+
